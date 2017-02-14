@@ -1,3 +1,10 @@
+This is My First React - Practice Web Application
+
+It's a Youtube-like that can search video, play and select viedo from side list
+using youtube-api provide in google api
+
+#### Follow Guide below #####
+
 # ReduxSimpleStarter
 
 Interested in learning [Redux](https://www.udemy.com/react-redux/)?
