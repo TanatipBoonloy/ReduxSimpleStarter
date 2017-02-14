@@ -9,6 +9,8 @@ class SearchBar extends React.Component {
         };
     }
 
+    input = null;
+
     onInputChange(input) {
         this.setState({
             search_key: input
@@ -20,8 +22,13 @@ class SearchBar extends React.Component {
         const {search_key} = this.state;
         return (
             <div className="search-bar">
-              <input value={ search_key }
-                     onChange={ (event) => this.onInputChange(event.target.value) } />
+              <input ref={ (elm) => this.input = elm }
+                     defaultValue={ search_key }
+                     onKeyPress={ (target) => {
+                                      if (target.key === 'Enter') {
+                                          this.onInputChange(this.input.value)
+                                      }
+                                  } } />
             </div>
             );
     }
